@@ -5,18 +5,20 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
-public class Calculadora extends JFrame{
-	
+@SuppressWarnings("serial")
+public class Calculadora extends JFrame {
+
 	public Calculadora() {
 		
 		organizarLayout();
 		
 		setSize(232, 322);
-		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
 		setVisible(true);
 	}
-
+	
+	
 	
 	private void organizarLayout() {
 		setLayout(new BorderLayout());
@@ -26,10 +28,10 @@ public class Calculadora extends JFrame{
 		add(display, BorderLayout.NORTH);
 		
 		Teclado teclado = new Teclado();
-		add(teclado);
-		
+		add(teclado, BorderLayout.CENTER);
 		
 	}
+
 
 
 	public static void main(String[] args) {
